@@ -518,6 +518,10 @@ class Voucherly extends PaymentModule
         //     $options[] = $option;
         // }
 
+        if (!isset($this->context->customer->id)) {
+            return $options;
+		}
+
         $voucherlyCustomerId = VoucherlyUsers::getVoucherlyId($this->context->customer->id);
         if (!isset($voucherlyCustomerId) || empty($voucherlyCustomerId)) {
             return $options;
