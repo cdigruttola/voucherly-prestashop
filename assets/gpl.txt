@@ -1,5 +1,5 @@
 /**
- * Copyright (C) 2024 Voucherly
+ * Copyright (C) 2026 Voucherly
  * 
  * This program is free software: you can redistribute it and/or modify
  * it under the terms of the GNU General Public License as published by
@@ -15,6 +15,6 @@
  * along with this program.  If not, see <https://www.gnu.org/licenses/>.
  *
  * @author    Voucherly <info@voucherly.it>
- * @copyright 2024 Voucherly
+ * @copyright 2026 Voucherly
  * @license   https://opensource.org/license/gpl-3-0/ GNU General Public License version 3 (GPL-3.0)
  */
