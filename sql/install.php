@@ -28,10 +28,25 @@ $sql = [];
 $sql[] = 'CREATE TABLE IF NOT EXISTS `' . pSQL(_DB_PREFIX_) . 'voucherly_users` (
     `id_voucherly_users` int(11) NOT NULL AUTO_INCREMENT,
     `id_customer` int(11) NOT NULL,
-    `id_voucherly` varchar(14) DEFAULT NULL,
+    `id_voucherly` varchar(2) DEFAULT NULL,
     `ambient` varchar(1) DEFAULT NULL,
     `date_add` datetime NOT NULL,
     PRIMARY KEY (`id_voucherly_users`)
+) ENGINE=' . pSQL(_MYSQL_ENGINE_) . ' DEFAULT CHARSET=utf8;
+';
+
+$sql[] = 'CREATE TABLE IF NOT EXISTS `' . pSQL(_DB_PREFIX_) . 'voucherly_payments` (
+    `id_voucherly_payments` int(11) NOT NULL AUTO_INCREMENT,
+    `id_voucherly` varchar(50) DEFAULT NULL,
+    `final_amount` DECIMAL(20, 6) NOT NULL,
+    `paid_amount` DECIMAL(20, 6) NOT NULL,
+    `paid_digital_amount` DECIMAL(20, 6) NOT NULL,
+    `paid_voucher_amount` DECIMAL(20, 6) DEFAULT 0,
+    `paid_fringe_amount` DECIMAL(20, 6) DEFAULT 0,
+    `paid_cash_amount` DECIMAL(20, 6) DEFAULT 0,
+    `ambient` varchar(1) DEFAULT NULL,
+    `date_add` datetime NOT NULL,
+    PRIMARY KEY (`id_voucherly_payments`)
 ) ENGINE=' . pSQL(_MYSQL_ENGINE_) . ' DEFAULT CHARSET=utf8;
 ';
 
