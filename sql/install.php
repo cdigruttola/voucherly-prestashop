@@ -28,7 +28,7 @@ $sql = [];
 $sql[] = 'CREATE TABLE IF NOT EXISTS `' . pSQL(_DB_PREFIX_) . 'voucherly_users` (
     `id_voucherly_users` int(11) NOT NULL AUTO_INCREMENT,
     `id_customer` int(11) NOT NULL,
-    `id_voucherly` varchar(2) DEFAULT NULL,
+    `id_voucherly` varchar(14) DEFAULT NULL,
     `ambient` varchar(1) DEFAULT NULL,
     `date_add` datetime NOT NULL,
     PRIMARY KEY (`id_voucherly_users`)
